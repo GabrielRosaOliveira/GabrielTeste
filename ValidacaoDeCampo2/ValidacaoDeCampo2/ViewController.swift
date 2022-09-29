@@ -43,15 +43,9 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField.text != "" {
-            textField.layer.borderWidth = 2
-            textField.layer.borderColor = UIColor.green.cgColor
-        } else {
-            textField.layer.borderWidth = 2
-            textField.layer.borderColor = UIColor.blue.cgColor
-        }
-    }
+//    func textFieldDidChangeSelection(_ textField: UITextField) {
+//
+//    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 2
@@ -59,26 +53,21 @@ extension ViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTextField.text == "" || addressTextField.text == "" || passwordTextField.text == "" || confirmPasswordTextField.text == "" {
-            registerButton.isEnabled = false
-        } else {
-            registerButton.isEnabled = true
-        }
-        
         if passwordTextField.text != confirmPasswordTextField.text {
             passwordTextField.layer.borderWidth = 2
             passwordTextField.layer.borderColor = UIColor.red.cgColor
             confirmPasswordTextField.layer.borderWidth = 2
             confirmPasswordTextField.layer.borderColor = UIColor.red.cgColor
-            registerButton.isEnabled = false
-        } else {
-            passwordTextField.layer.borderWidth = 2
-            passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-            confirmPasswordTextField.layer.borderWidth = 2
-            confirmPasswordTextField.layer.borderColor = UIColor.lightGray.cgColor
-            registerButton.isEnabled = true
         }
         
+        if nameTextField.text == "" || addressTextField.text == "" || passwordTextField.text == "" || confirmPasswordTextField.text == "" {
+            registerButton.isEnabled = false
+        } else if passwordTextField.text == confirmPasswordTextField.text {
+            registerButton.isEnabled = true
+        } else {
+            print("oi")
+        }
+    
         if textField.text == "" {
             textField.layer.borderWidth = 2
             textField.layer.borderColor = UIColor.red.cgColor
