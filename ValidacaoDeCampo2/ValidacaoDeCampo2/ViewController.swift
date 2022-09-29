@@ -37,6 +37,9 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        print("Cadastro Realizado com sucesso")
+    }
 }
 
 extension ViewController: UITextFieldDelegate {
