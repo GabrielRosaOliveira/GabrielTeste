@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -24,9 +24,8 @@ class ViewController: UIViewController {
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
         configTextFieldsAndButton()
-        validacaoDoBotaoCadastro()
     }
-
+    
     func configTextFieldsAndButton() {
         nameTextField.placeholder = "Digite seu nome"
         addressTextField.placeholder = "Digite seu email"
@@ -34,22 +33,38 @@ class ViewController: UIViewController {
         confirmPasswordTextField.placeholder = "Confirmar sennha"
         
         registerButton.setTitle("Cadastrar", for: .normal)
-        registerButton.setTitleColor(.white, for: .normal)
         registerButton.backgroundColor = .purple
         registerButton.layer.cornerRadius = 19
+        registerButton.isEnabled = false
     }
     
-    func validacaoDoBotaoCadastro() {
-        if nameTextField.text == "" || addressTextField.text == "" || passwordTextField.text == "" || confirmPasswordTextField.text == "" {
-            registerButton.isEnabled = false
-            registerButton.backgroundColor = .gray
+    
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if textField.text != "" {
+            textField.layer.borderWidth = 2
+            textField.layer.borderColor = UIColor.green.cgColor
         } else {
-            registerButton.isEnabled = true
-            registerButton.backgroundColor = .purple
+            textField.layer.borderWidth = 2
+            textField.layer.borderColor = UIColor.blue.cgColor
         }
     }
     
-    func validacaoDasSenhasIguais() {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 2
+        textField.layer.borderColor = UIColor.blue.cgColor
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if nameTextField.text == "" || addressTextField.text == "" || passwordTextField.text == "" || confirmPasswordTextField.text == "" {
+            registerButton.isEnabled = false
+        } else {
+            registerButton.isEnabled = true
+        }
+        
         if passwordTextField.text != confirmPasswordTextField.text {
             passwordTextField.layer.borderWidth = 2
             passwordTextField.layer.borderColor = UIColor.red.cgColor
@@ -63,27 +78,7 @@ class ViewController: UIViewController {
             confirmPasswordTextField.layer.borderColor = UIColor.lightGray.cgColor
             registerButton.isEnabled = true
         }
-    }
-}
-
-extension ViewController: UITextFieldDelegate {
-
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField.text != "" {
-            textField.layer.borderWidth = 2
-            textField.layer.borderColor = UIColor.green.cgColor
-        } else {
-            textField.layer.borderWidth = 2
-            textField.layer.borderColor = UIColor.blue.cgColor
-        }
-    }
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 2
-        textField.layer.borderColor = UIColor.blue.cgColor
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
+        
         if textField.text == "" {
             textField.layer.borderWidth = 2
             textField.layer.borderColor = UIColor.red.cgColor
@@ -91,12 +86,12 @@ extension ViewController: UITextFieldDelegate {
             textField.layer.borderWidth = 2
             textField.layer.borderColor = UIColor.lightGray.cgColor
         }
-        validacaoDasSenhasIguais()
+        
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-
+    
 }
