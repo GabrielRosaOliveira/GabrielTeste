@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         priceGasolina.keyboardType = .decimalPad
         
     }
-    
+
     func calcularCombustivel() {
         //LOGICA DO CALCULO
         let alcool: Double = Double(priceAlcool.text ?? "0") ?? 0
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         //        IDENTIFICANDO A VIRGULA COMO UM PONTO
         if string == "," {
-            textField.text = textField.text! + "."
+            textField.text = textField.text ?? "" + "."
             return false
         }
         return true
