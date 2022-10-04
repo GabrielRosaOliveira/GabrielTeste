@@ -25,6 +25,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         priceGasolina.delegate = self
         calcPriceButton.isEnabled = false
         botaDesabilitado()
+        priceAlcool.keyboardType = .decimalPad
+        priceGasolina.keyboardType = .decimalPad
+        
     }
     
     func calcularCombustivel() {
@@ -38,6 +41,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             resultLabel.text = "Não consegui calcular, tente novamente!!!"
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //        IDENTIFICANDO A VIRGULA COMO UM PONTO
+        if string == "," {
+            textField.text = textField.text! + "."
+            return false
+        }
+        return true
     }
     
     func configsButtonAndLabel() {
@@ -99,3 +111,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+class CustomUITextField: UITextField {
+    //    DESABILITANDO A OPCAO DE COLAR TEXTO NOS TEXTFIELDS
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        if action == #selector(UIResponderStandardEditActions.paste(_:)) {
+            return false
+        }
+        return super.canPerformAction(action, withSender: sender)
+    }
+}
