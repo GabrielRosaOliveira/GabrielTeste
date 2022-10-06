@@ -27,8 +27,10 @@ class ViewController: UIViewController {
         botaDesabilitado()
         priceAlcool.keyboardType = .decimalPad
         priceGasolina.keyboardType = .decimalPad
-        
+    
     }
+    
+
     
     func calcularCombustivel() {
         //LOGICA DO CALCULO
