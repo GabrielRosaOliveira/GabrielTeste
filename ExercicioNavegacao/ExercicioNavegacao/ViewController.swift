@@ -14,8 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func tappedTela01(_ sender: UIButton) {
-        performSegue(withIdentifier: "tela01", sender: nil)
-    }
+    
+    
 }
 
