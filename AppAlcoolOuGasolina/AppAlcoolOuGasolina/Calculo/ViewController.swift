@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var priceAlcool: UITextField!
     @IBOutlet weak var priceGasolina: UITextField!
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         priceGasolina.keyboardType = .decimalPad
         
     }
-
+    
     func calcularCombustivel() {
         //LOGICA DO CALCULO
         let alcool: Double = Double(priceAlcool.text ?? "0") ?? 0
@@ -41,15 +41,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             resultLabel.text = "Não consegui calcular, tente novamente!!!"
         }
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //        IDENTIFICANDO A VIRGULA COMO UM PONTO
-        if string == "," {
-            textField.text = textField.text ?? "" + "."
-            return false
-        }
-        return true
     }
     
     func configsButtonAndLabel() {
@@ -72,9 +63,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
         priceGasolina.textAlignment = .center
     }
     
+    func botaDesabilitado() {
+        // validacao do botao calcular
+        if priceAlcool.text == "" || priceGasolina.text == "" {
+            calcPriceButton.isEnabled = false
+            calcPriceButton.backgroundColor = .gray
+        } else {
+            calcPriceButton.isEnabled = true
+            calcPriceButton.backgroundColor = UIColor(red: 243/255, green: 247/255, blue: 0/255, alpha: 1.0)
+        }
+    }
     
     @IBAction func tappedCalcButton(_ sender: UIButton) {
         calcularCombustivel()
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //        IDENTIFICANDO A VIRGULA COMO UM PONTO
+        if string == "," {
+            textField.text = (textField.text ?? "") + "."
+            return false
+        }
+        return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -97,26 +110,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    func botaDesabilitado() {
-        // validacao do botao calcular
-        if priceAlcool.text == "" || priceGasolina.text == "" {
-            calcPriceButton.isEnabled = false
-            calcPriceButton.backgroundColor = .gray
-        } else {
-            calcPriceButton.isEnabled = true
-            calcPriceButton.backgroundColor = UIColor(red: 243/255, green: 247/255, blue: 0/255, alpha: 1.0)
-        }
-    }
-}
-
-class CustomUITextField: UITextField {
-    //    DESABILITANDO A OPCAO DE COLAR TEXTO NOS TEXTFIELDS
-    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
-        if action == #selector(UIResponderStandardEditActions.paste(_:)) {
-            return false
-        }
-        return super.canPerformAction(action, withSender: sender)
     }
 }
