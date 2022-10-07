@@ -60,11 +60,10 @@
 		C04051CF28EF9021000FC058 /* ExercicioNavegacao */ = {
 			isa = PBXGroup;
 			children = (
+				C04051E928EFAEF7000FC058 /* Tela root */,
 				C04051E828EFABBB000FC058 /* Tela02 */,
 				C04051D028EF9021000FC058 /* AppDelegate.swift */,
 				C04051D228EF9021000FC058 /* SceneDelegate.swift */,
-				C04051D428EF9021000FC058 /* ViewController.swift */,
-				C04051D628EF9021000FC058 /* Main.storyboard */,
 				C04051D928EF9021000FC058 /* Assets.xcassets */,
 				C04051DB28EF9021000FC058 /* LaunchScreen.storyboard */,
 				C04051DE28EF9021000FC058 /* Info.plist */,
@@ -79,6 +78,15 @@
 				C04051E628EFABA7000FC058 /* Tela02VC.storyboard */,
 			);
 			path = Tela02;
+			sourceTree = "<group>";
+		};
+		C04051E928EFAEF7000FC058 /* Tela root */ = {
+			isa = PBXGroup;
+			children = (
+				C04051D628EF9021000FC058 /* Main.storyboard */,
+				C04051D428EF9021000FC058 /* ViewController.swift */,
+			);
+			path = "Tela root";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
