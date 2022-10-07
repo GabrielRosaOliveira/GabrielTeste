@@ -21,7 +21,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="hXk-Xl-Agx" kind="show" id="aJV-sB-Qc7"/>
+                                    <action selector="tappedGOTela02Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGB-kX-Mv4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,26 +33,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l9u-b5-J2Q"/>
+                    <connections>
+                        <segue destination="wLf-RF-UCz" kind="show" identifier="GoTela02" id="Yu8-sO-LvL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="449.23076923076923" y="-2.1327014218009479"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="5U5-SC-isv">
+        <!--Tela02VC-->
+        <scene sceneID="uNa-jI-QCA">
             <objects>
-                <viewController id="hXk-Xl-Agx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Odf-Xt-1Zm">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0Jt-Vm-ecZ"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="t18-32-LKo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BPk-hv-fec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Tela02VC" id="wLf-RF-UCz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yAP-Sq-XTd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3Y-Zs-uqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="1137" y="-31"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aMr-W3-KGw">
@@ -76,9 +73,6 @@
     <resources>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

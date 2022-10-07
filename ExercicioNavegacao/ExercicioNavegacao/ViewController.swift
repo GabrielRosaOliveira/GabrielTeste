@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     }
 
     
+    @IBAction func tappedGOTela02Button(_ sender: UIButton) {
+        performSegue(withIdentifier: "GoTela02", sender: nil)
+    }
     
 }
 
