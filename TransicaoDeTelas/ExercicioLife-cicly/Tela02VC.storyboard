@@ -41,7 +41,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lastNameLabel" destination="TNu-GR-bSu" id="5VU-tt-pNz"/>
+                        <outlet property="lastNameLabel" destination="TNu-GR-bSu" id="xGO-SJ-Cf6"/>
                         <outlet property="nameLabel" destination="URu-6z-LQ2" id="ZVZ-Ps-SNf"/>
                     </connections>
                 </viewController>
