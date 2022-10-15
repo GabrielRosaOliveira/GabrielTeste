@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     @IBAction func tappedScreen02Button(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Tela02VC", bundle: nil).instantiateViewController(withIdentifier: "Tela02VC") as? Tela02VC
         vc?.name = "\(nameTextField.text ?? "") \(lastNameTextField.text ?? "")"
-                navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
