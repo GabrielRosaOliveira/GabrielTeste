@@ -10,7 +10,7 @@ import UIKit
 class Tela02VC: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
+    
     
     var name: String = ""
     var lastName: String = ""
@@ -19,7 +19,7 @@ class Tela02VC: UIViewController {
         super.viewDidLoad()
         
         nameLabel.text = name
-        lastNameLabel.text = lastName
+        
     }
     
 

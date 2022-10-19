@@ -22,26 +22,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNu-GR-bSu">
-                                <rect key="frame" x="135" y="349" width="120" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TNu-GR-bSu" secondAttribute="trailing" constant="135" id="2dB-J0-Pfr"/>
                             <constraint firstItem="URu-6z-LQ2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="133" id="DwB-ya-l47"/>
-                            <constraint firstItem="TNu-GR-bSu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="135" id="JbH-hN-Cw5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="URu-6z-LQ2" secondAttribute="trailing" constant="137" id="gSC-0o-WpI"/>
                             <constraint firstItem="URu-6z-LQ2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="201" id="qVo-ne-tuC"/>
-                            <constraint firstItem="TNu-GR-bSu" firstAttribute="top" secondItem="URu-6z-LQ2" secondAttribute="bottom" constant="80.670000000000002" id="tL8-8d-AQC"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lastNameLabel" destination="TNu-GR-bSu" id="xGO-SJ-Cf6"/>
                         <outlet property="nameLabel" destination="URu-6z-LQ2" id="ZVZ-Ps-SNf"/>
                     </connections>
                 </viewController>
