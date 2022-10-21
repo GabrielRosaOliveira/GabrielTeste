@@ -13,6 +13,8 @@
 		C03E45BA290217EC00034ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03E45B8290217EC00034ABB /* Main.storyboard */; };
 		C03E45BC290217ED00034ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03E45BB290217ED00034ABB /* Assets.xcassets */; };
 		C03E45BF290217ED00034ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03E45BD290217ED00034ABB /* LaunchScreen.storyboard */; };
+		C03E45C92902240300034ABB /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E45C72902240300034ABB /* NameTableViewCell.swift */; };
+		C03E45CA2902240300034ABB /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C03E45C82902240300034ABB /* NameTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C03E45BB290217ED00034ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C03E45BE290217ED00034ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C03E45C0290217ED00034ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C03E45C72902240300034ABB /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		C03E45C82902240300034ABB /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		C03E45B1290217EC00034ABB /* PrimeiroProjetoTableView */ = {
 			isa = PBXGroup;
 			children = (
+				C03E45C62902238B00034ABB /* Cell */,
 				C03E45B2290217EC00034ABB /* AppDelegate.swift */,
 				C03E45B4290217EC00034ABB /* SceneDelegate.swift */,
 				C03E45B6290217EC00034ABB /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				C03E45C0290217ED00034ABB /* Info.plist */,
 			);
 			path = PrimeiroProjetoTableView;
+			sourceTree = "<group>";
+		};
+		C03E45C62902238B00034ABB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C03E45C72902240300034ABB /* NameTableViewCell.swift */,
+				C03E45C82902240300034ABB /* NameTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,7 @@
 			files = (
 				C03E45BF290217ED00034ABB /* LaunchScreen.storyboard in Resources */,
 				C03E45BC290217ED00034ABB /* Assets.xcassets in Resources */,
+				C03E45CA2902240300034ABB /* NameTableViewCell.xib in Resources */,
 				C03E45BA290217EC00034ABB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +155,7 @@
 			files = (
 				C03E45B7290217EC00034ABB /* ViewController.swift in Sources */,
 				C03E45B3290217EC00034ABB /* AppDelegate.swift in Sources */,
+				C03E45C92902240300034ABB /* NameTableViewCell.swift in Sources */,
 				C03E45B5290217EC00034ABB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,8 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    var data: [String] = ["Gabriel", "Lorena", "Marlei", "Daniel", "Aline", "Sara"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
     func configTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(NameTableViewCell.nib(), forCellReuseIdentifier: NameTableViewCell.identifier)
     }
 
 
@@ -28,11 +30,16 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
 //    Indicar a quantidade de linhas por sessao
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return data.count
     }
 //    Popular a celula
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: NameTableViewCell.identifier, for: indexPath) as? NameTableViewCell
+        cell?.setupCell(name: data[indexPath.row])
+        
+        
+        return cell ?? UITableViewCell()
     }
     
     
