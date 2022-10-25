@@ -7,6 +7,15 @@
 
 import UIKit
 
+// Passo a passo
+// Criar a TableView
+// Fazer a ligação
+// Configurar a tableView
+// Criar Celula
+// Configurar Celula
+// Registrar a Celula
+// Configurar Exibicao da Celula
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -23,8 +32,6 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(NameTableViewCell.nib(), forCellReuseIdentifier: NameTableViewCell.identifier)
     }
-
-
 }
 
 extension ViewController: UITableViewDataSource {
@@ -41,10 +48,15 @@ extension ViewController: UITableViewDataSource {
         
         return cell ?? UITableViewCell()
     }
-    
-    
 }
 
 extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        data.append("julia")
+        data.remove(at: 0)
+    }
     
 }
