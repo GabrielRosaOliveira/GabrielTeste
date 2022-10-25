@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarsTableViewCell" rowHeight="67" id="KGk-i7-Jjw" customClass="CarsTableViewCell" customModule="MarcaCarro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig3-dV-FZf">
+                        <rect key="frame" x="129.66666666666666" y="18.666666666666671" width="63.666666666666657" height="30"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JWo-Ba-hpH">
+                        <rect key="frame" x="15" y="3" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="1Wy-6a-PF4"/>
+                            <constraint firstAttribute="width" constant="60" id="a75-gt-KPo"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ig3-dV-FZf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="FfE-JQ-10P"/>
+                    <constraint firstItem="JWo-Ba-hpH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="fZD-BO-jfK"/>
+                    <constraint firstItem="ig3-dV-FZf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ksb-Mj-eEY"/>
+                    <constraint firstItem="JWo-Ba-hpH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="qBG-RN-Nwm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="carImage" destination="JWo-Ba-hpH" id="240-vR-RFf"/>
+                <outlet property="nameCarLabel" destination="ig3-dV-FZf" id="udQ-yF-uVM"/>
+            </connections>
+            <point key="canvasLocation" x="50" y="28.791469194312796"/>
+        </tableViewCell>
+    </objects>
+</document>
