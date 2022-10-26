@@ -8,8 +8,6 @@
 import UIKit
 
 struct Cars {
-
     var name: String
     var image: UIImage
-    
 }

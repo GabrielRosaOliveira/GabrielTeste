@@ -7,8 +7,15 @@
 
 import UIKit
 
-class CarsTableViewCell: UITableViewCell {
+// Criar a celula
+// Criar identifier
+// Add identifier na xib
+// Criar metodo da Nib
+// Criar os elementos e fazer as suas ligações
+// Configurar Elementos
+// Criar metodo de Setup!!!!!!!
 
+class CarsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameCarLabel: UILabel!
     @IBOutlet weak var carImage: UIImageView!
@@ -21,14 +28,11 @@ class CarsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        selectionStyle = .none
     }
     
     func setupCell(cars: Cars) {
         nameCarLabel.text = cars.name
         carImage.image = cars.image
     }
-
-
-    
 }
