@@ -40,6 +40,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = self.data[indexPath.row]
         print(data[indexPath.row].name)
     }
 }
