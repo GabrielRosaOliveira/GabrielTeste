@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C06DAA232919F18B000D6BEB /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06DAA212919F18B000D6BEB /* CustomCollectionViewCell.swift */; };
+		C06DAA242919F18B000D6BEB /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06DAA222919F18B000D6BEB /* CustomCollectionViewCell.xib */; };
 		C0F6944F2919E55900BB0EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6944E2919E55900BB0EFA /* AppDelegate.swift */; };
 		C0F694512919E55900BB0EFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F694502919E55900BB0EFA /* SceneDelegate.swift */; };
 		C0F694532919E55900BB0EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F694522919E55900BB0EFA /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C06DAA212919F18B000D6BEB /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		C06DAA222919F18B000D6BEB /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		C0F6944B2919E55900BB0EFA /* tableViewCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableViewCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F6944E2919E55900BB0EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F694502919E55900BB0EFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C06DAA202919F158000D6BEB /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C06DAA212919F18B000D6BEB /* CustomCollectionViewCell.swift */,
+				C06DAA222919F18B000D6BEB /* CustomCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		C0F694422919E55900BB0EFA = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,7 @@
 		C0F6944D2919E55900BB0EFA /* tableViewCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				C06DAA202919F158000D6BEB /* CollectionViewCell */,
 				C0F694622919E70700BB0EFA /* TableViewCell */,
 				C0F6944E2919E55900BB0EFA /* AppDelegate.swift */,
 				C0F694502919E55900BB0EFA /* SceneDelegate.swift */,
@@ -142,6 +156,7 @@
 				C0F6945B2919E55A00BB0EFA /* LaunchScreen.storyboard in Resources */,
 				C0F694582919E55A00BB0EFA /* Assets.xcassets in Resources */,
 				C0F694662919E72900BB0EFA /* CarTableViewCell.xib in Resources */,
+				C06DAA242919F18B000D6BEB /* CustomCollectionViewCell.xib in Resources */,
 				C0F694562919E55900BB0EFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F694532919E55900BB0EFA /* ViewController.swift in Sources */,
+				C06DAA232919F18B000D6BEB /* CustomCollectionViewCell.swift in Sources */,
 				C0F6944F2919E55900BB0EFA /* AppDelegate.swift in Sources */,
 				C0F694652919E72900BB0EFA /* CarTableViewCell.swift in Sources */,
 				C0F694512919E55900BB0EFA /* SceneDelegate.swift in Sources */,
