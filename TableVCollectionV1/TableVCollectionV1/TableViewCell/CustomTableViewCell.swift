@@ -45,7 +45,7 @@ class CustomTableViewCell: UITableViewCell {
 extension CustomTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
  
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 230)
+        return CGSize(width: collectionView.frame.width, height: 300)
     }
 }
 
