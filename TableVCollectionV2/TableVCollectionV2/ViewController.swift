@@ -11,8 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let listVehicles: [Vehicles] = [Vehicles(titel: "Carros", list: ["carro1", "carro2", "carro3", "carro4", "carro5", "carro6"]),
-                                    Vehicles(titel: "Motos", list: ["carro2", "carro4", "carro5", "carro6"])]
+    let listVehicles: [Vehicles] = [Vehicles(titel: "Carros", list: ["car1", "car2", "car3", "car4", "car5", "car6"]),
+                                    Vehicles(titel: "Motos", list: ["car2", "car4", "car5", "car6"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: CarsTableViewCell.identifier, for: indexPath) as? CarsTableViewCell
-            cell?.setupCell(title: "Carros:", list: listVehicles)
+        cell?.setupCell(title: "Carros:", list: listVehicles[indexPath.row].list)
             return cell ?? UITableViewCell()
     }
     
