@@ -35,8 +35,9 @@ class CarTableViewCell: UITableViewCell {
         collectionView.register(CustomCollectionViewCell.nib(), forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
     }
     
-    func setupCell(name: [String]) {
+    func setupCell(name: [String], title: String) {
         self.data = name
+        titleLabel.text = title
     }
  
 }

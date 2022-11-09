@@ -17,6 +17,7 @@
 		C0090C67291C419700CA2DA1 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0090C65291C419700CA2DA1 /* CarTableViewCell.xib */; };
 		C0090C6B291C42B900CA2DA1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0090C69291C42B900CA2DA1 /* CustomCollectionViewCell.swift */; };
 		C0090C6C291C42B900CA2DA1 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0090C6A291C42B900CA2DA1 /* CustomCollectionViewCell.xib */; };
+		C0090C6F291C52D000CA2DA1 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0090C6E291C52D000CA2DA1 /* Vehicles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C0090C65291C419700CA2DA1 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		C0090C69291C42B900CA2DA1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0090C6A291C42B900CA2DA1 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		C0090C6E291C52D000CA2DA1 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		C0090C4E291C410100CA2DA1 /* TableVCollectionV3 */ = {
 			isa = PBXGroup;
 			children = (
+				C0090C6D291C52BD00CA2DA1 /* Model */,
 				C0090C68291C429F00CA2DA1 /* CollectionViewCell */,
 				C0090C63291C418100CA2DA1 /* TableViewCell */,
 				C0090C4F291C410100CA2DA1 /* AppDelegate.swift */,
@@ -93,6 +96,14 @@
 				C0090C6A291C42B900CA2DA1 /* CustomCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C0090C6D291C52BD00CA2DA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0090C6E291C52D000CA2DA1 /* Vehicles.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			files = (
 				C0090C54291C410100CA2DA1 /* ViewController.swift in Sources */,
 				C0090C6B291C42B900CA2DA1 /* CustomCollectionViewCell.swift in Sources */,
+				C0090C6F291C52D000CA2DA1 /* Vehicles.swift in Sources */,
 				C0090C66291C419700CA2DA1 /* CarTableViewCell.swift in Sources */,
 				C0090C50291C410100CA2DA1 /* AppDelegate.swift in Sources */,
 				C0090C52291C410100CA2DA1 /* SceneDelegate.swift in Sources */,
