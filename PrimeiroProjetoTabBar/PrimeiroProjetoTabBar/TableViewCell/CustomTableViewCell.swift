@@ -19,19 +19,12 @@ class CustomTableViewCell: UITableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
-    var data: [String] = []
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
 
-    func setupCell(title: String, image: String) {
-        titleLabel.text = title
-        paisagemImageView.image = UIImage(named: image)
-    }
- 
-    func setupCell2(user: User) {
+    func setupCell(user: User) {
         titleLabel.text = user.name
         paisagemImageView.image = user.image
     }

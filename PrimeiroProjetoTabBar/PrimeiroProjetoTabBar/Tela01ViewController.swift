@@ -17,7 +17,7 @@ class Tela01ViewController: UIViewController {
     
     var array: [String] = []
     
-    
+    var list: [String] = ["car1", "car2", "car3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,7 @@ class Tela01ViewController: UIViewController {
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
         array.append(nameTextField.text ?? "")
-        
-
+        nameTextField.text = ""
         tableView.reloadData()
     }
 }
@@ -51,8 +50,7 @@ extension Tela01ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
-        cell?.setupCell(title: array[indexPath.row], image: array[indexPath.row])
-        cell?.setupCell2(user: User(name: array[indexPath.row], image: UIImage(named: "moto3") ?? UIImage()))
+        cell?.setupCell(user: User(name: array[indexPath.row], image: UIImage(named: "moto3") ?? UIImage()))
         return cell ?? UITableViewCell()
     }
     
