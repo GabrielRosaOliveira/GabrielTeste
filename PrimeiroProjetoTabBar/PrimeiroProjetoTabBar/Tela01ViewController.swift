@@ -15,15 +15,17 @@ class Tela01ViewController: UIViewController {
     @IBOutlet weak var addNameButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    var array: [String] = []
+    @IBOutlet weak var digiteNameLabel: UILabel!
     
-    var list: [String] = ["car1", "car2", "car3"]
+    
+    var array: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-    
+        personImageView.tintColor = .white
     }
+    
 
     func configTableView() {
         tableView.delegate = self
@@ -32,11 +34,15 @@ class Tela01ViewController: UIViewController {
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
-        array.append(nameTextField.text ?? "")
+        array.append(User(name: nameTextField.text ?? "", image: UIImage(systemName: "person") ?? UIImage()))
         nameTextField.text = ""
         tableView.reloadData()
     }
+    
+    
+    
 }
+
 
 extension Tela01ViewController: UITableViewDelegate {
     
@@ -50,7 +56,7 @@ extension Tela01ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
-        cell?.setupCell(user: User(name: array[indexPath.row], image: UIImage(named: "moto3") ?? UIImage()))
+        cell?.setupCell(user: array[indexPath.row])
         return cell ?? UITableViewCell()
     }
     

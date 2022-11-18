@@ -21,7 +21,7 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        paisagemImageView.tintColor = .white
     }
 
     func setupCell(user: User) {

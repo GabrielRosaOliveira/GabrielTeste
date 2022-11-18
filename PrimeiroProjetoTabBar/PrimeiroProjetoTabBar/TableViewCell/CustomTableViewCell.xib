@@ -42,7 +42,7 @@
                 <outlet property="paisagemImageView" destination="V5f-SU-DuL" id="PVg-4P-DmU"/>
                 <outlet property="titleLabel" destination="Hu9-BX-pTg" id="ZIO-wB-yK7"/>
             </connections>
-            <point key="canvasLocation" x="-40" y="26"/>
+            <point key="canvasLocation" x="92" y="-14"/>
         </tableViewCell>
     </objects>
     <resources>

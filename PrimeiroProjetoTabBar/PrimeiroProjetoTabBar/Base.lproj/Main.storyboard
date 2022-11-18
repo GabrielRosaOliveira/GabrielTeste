@@ -75,9 +75,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bzb-qW-uHg">
                                 <rect key="frame" x="0.0" y="471" width="393" height="298"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="298" id="1Pn-gF-Vkn"/>
-                                </constraints>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7ML-3N-4bc"/>
@@ -85,6 +82,7 @@
                         <constraints>
                             <constraint firstItem="pC3-HA-3By" firstAttribute="centerX" secondItem="fNq-fS-dMe" secondAttribute="centerX" id="46U-ao-oeK"/>
                             <constraint firstItem="usV-wd-cgq" firstAttribute="top" secondItem="pC3-HA-3By" secondAttribute="bottom" constant="30" id="FJo-ty-Ma4"/>
+                            <constraint firstItem="bzb-qW-uHg" firstAttribute="top" secondItem="dRV-Gb-IqL" secondAttribute="bottom" constant="27" id="LGD-vo-FoP"/>
                             <constraint firstItem="dRV-Gb-IqL" firstAttribute="centerX" secondItem="fNq-fS-dMe" secondAttribute="centerX" id="Ocg-vW-hKt"/>
                             <constraint firstItem="pC3-HA-3By" firstAttribute="top" secondItem="7ML-3N-4bc" secondAttribute="top" constant="40" id="OrU-5m-vaj"/>
                             <constraint firstItem="bzb-qW-uHg" firstAttribute="leading" secondItem="7ML-3N-4bc" secondAttribute="leading" id="Sh3-AJ-hcm"/>
@@ -104,6 +102,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="addNameButton" destination="dRV-Gb-IqL" id="KQ7-hC-0S7"/>
+                        <outlet property="digiteNameLabel" destination="NlP-OG-sCd" id="ur6-fX-GHJ"/>
                         <outlet property="editFotoButton" destination="usV-wd-cgq" id="Xin-HT-jji"/>
                         <outlet property="nameTextField" destination="I8t-GW-Mzq" id="xxa-ka-rkx"/>
                         <outlet property="personImageView" destination="pC3-HA-3By" id="Cgj-nn-r5P"/>
