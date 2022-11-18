@@ -14,19 +14,28 @@ class Tela01ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addNameButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var digiteNameLabel: UILabel!
     
     
+    
     var array: [User] = []
+    let imagePicker: UIImagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
         personImageView.tintColor = .white
+        nameTextField.delegate = self
+        configImagePicker()
+        personImageView.image = UIImage(systemName: "person")
     }
     
 
+    func configImagePicker() {
+        imagePicker.delegate = self
+        
+    }
+    
     func configTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -34,12 +43,54 @@ class Tela01ViewController: UIViewController {
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
-        array.append(User(name: nameTextField.text ?? "", image: UIImage(systemName: "person") ?? UIImage()))
-        nameTextField.text = ""
-        tableView.reloadData()
+        if textFieldIsNotEmpty() {
+            array.append(User(name: nameTextField.text ?? "", image: UIImage(systemName: "person") ?? UIImage()))
+            nameTextField.text = ""
+            tableView.reloadData()
+        }
+    }
+    
+    @IBAction func tappedEditPhotoButton(_ sender: UIButton) {
+        imagePicker.allowsEditing = false
+//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+//            imagePicker.sourceType = .camera
+//        } else {
+            
+//        }
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker,animated: true)
     }
     
     
+    func textFieldIsNotEmpty() -> Bool {
+        if nameTextField.text?.isEmpty ?? true || nameTextField.text?.hasPrefix(" ") ?? true {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+}
+
+extension Tela01ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.personImageView.image = image
+        }
+        picker.dismiss(animated: true)
+    }
+    
+    
+    
+}
+
+extension Tela01ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return true
+    }
     
 }
 
