@@ -27,7 +27,7 @@ class Tela01ViewController: UIViewController {
         personImageView.tintColor = .white
         nameTextField.delegate = self
         configImagePicker()
-        personImageView.image = UIImage(systemName: "person")
+        personImageView.image = UIImage(systemName: "person.circle.fill")
     }
     
 
@@ -44,7 +44,7 @@ class Tela01ViewController: UIViewController {
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
         if textFieldIsNotEmpty() {
-            array.append(User(name: nameTextField.text ?? "", image: UIImage(systemName: "person") ?? UIImage()))
+            array.append(User(name: nameTextField.text ?? "", image: personImageView.image ?? UIImage()))
             nameTextField.text = ""
             tableView.reloadData()
         }
