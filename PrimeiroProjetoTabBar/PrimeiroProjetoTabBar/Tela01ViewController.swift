@@ -8,7 +8,7 @@
 import UIKit
 
 class Tela01ViewController: UIViewController {
-
+    
     @IBOutlet weak var personImageView: UIImageView!
     @IBOutlet weak var editFotoButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
@@ -16,21 +16,19 @@ class Tela01ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var digiteNameLabel: UILabel!
     
-    
-    
     var array: [User] = []
     let imagePicker: UIImagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-        personImageView.tintColor = .white
+        personImageView.tintColor = .black
         nameTextField.delegate = self
         configImagePicker()
         personImageView.image = UIImage(systemName: "person.circle.fill")
     }
     
-
+    
     func configImagePicker() {
         imagePicker.delegate = self
         
@@ -47,16 +45,21 @@ class Tela01ViewController: UIViewController {
             array.append(User(name: nameTextField.text ?? "", image: personImageView.image ?? UIImage()))
             nameTextField.text = ""
             tableView.reloadData()
+        } else {
+            let alertController = UIAlertController(title: "Atenção", message: "Informe o nome corretamente", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel)
+            alertController.addAction(ok)
+            present(alertController, animated: true)
         }
     }
     
     @IBAction func tappedEditPhotoButton(_ sender: UIButton) {
         imagePicker.allowsEditing = false
-//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-//            imagePicker.sourceType = .camera
-//        } else {
-            
-//        }
+        //        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+        //            imagePicker.sourceType = .camera
+        //        } else {
+        
+        //        }
         imagePicker.sourceType = .photoLibrary
         present(imagePicker,animated: true)
     }
@@ -81,8 +84,6 @@ extension Tela01ViewController: UIImagePickerControllerDelegate, UINavigationCon
         picker.dismiss(animated: true)
     }
     
-    
-    
 }
 
 extension Tela01ViewController: UITextFieldDelegate {
@@ -91,9 +92,7 @@ extension Tela01ViewController: UITextFieldDelegate {
         nameTextField.resignFirstResponder()
         return true
     }
-    
 }
-
 
 extension Tela01ViewController: UITableViewDelegate {
     
@@ -113,6 +112,15 @@ extension Tela01ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 171
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        array.remove(at: indexPath.row)
+        tableView.reloadData()
     }
     
 }
