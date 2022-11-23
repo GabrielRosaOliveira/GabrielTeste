@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PrimeiroAppNotificationCenterProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_apple" translatesAutoresizingMaskIntoConstraints="NO" id="UDw-KJ-srh">
+                                <rect key="frame" x="75.666666666666686" y="187" width="242" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="NJH-2O-nMf"/>
+                                    <constraint firstAttribute="height" constant="191" id="u5S-KX-l3G"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ab-n1-NzW">
+                                <rect key="frame" x="81" y="494" width="231" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JHV-ie-IEf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p2-jK-ndk">
+                                <rect key="frame" x="30" y="684" width="333" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="won-dz-pb3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Label"/>
+                                <connections>
+                                    <action selector="tappedClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TMs-Re-u1h"/>
+                                    <segue destination="wZa-wu-28B" kind="show" id="Vjp-4S-hhy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="UDw-KJ-srh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="9sa-oT-Ikl"/>
+                            <constraint firstItem="3ab-n1-NzW" firstAttribute="top" secondItem="UDw-KJ-srh" secondAttribute="bottom" constant="116" id="PaU-Br-Jy9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8p2-jK-ndk" secondAttribute="trailing" constant="30" id="aJl-7C-Z3a"/>
+                            <constraint firstItem="8p2-jK-ndk" firstAttribute="top" secondItem="3ab-n1-NzW" secondAttribute="bottom" constant="150" id="b27-Vb-gJN"/>
+                            <constraint firstItem="UDw-KJ-srh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gLz-U8-KEq"/>
+                            <constraint firstItem="3ab-n1-NzW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="khW-3B-uCl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3ab-n1-NzW" secondAttribute="trailing" constant="81" id="wEj-Rb-qkJ"/>
+                            <constraint firstItem="8p2-jK-ndk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="wtB-zB-9FL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleImageView" destination="UDw-KJ-srh" id="l0D-pv-kIr"/>
+                        <outlet property="clickButton" destination="8p2-jK-ndk" id="1Ua-k5-1eh"/>
+                        <outlet property="resultLabel" destination="3ab-n1-NzW" id="Xdk-lj-ERC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="-4"/>
+        </scene>
+        <!--Tela02 View Controller-->
+        <scene sceneID="HT9-vE-1cb">
+            <objects>
+                <viewController storyboardIdentifier="Tela02ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZa-wu-28B" customClass="Tela02ViewController" customModule="PrimeiroAppNotificationCenterProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cCF-Kv-hDL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paO-1E-XMZ">
+                                <rect key="frame" x="140" y="59" width="113" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="dgn-7z-dUU"/>
+                                    <constraint firstAttribute="height" constant="46" id="dxA-bO-IDS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
+                                <color key="textColor" red="0.85714985310000003" green="0.87843137979999997" blue="0.01850652237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFG-9O-lM7">
+                                <rect key="frame" x="56.666666666666657" y="178" width="280" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="MnG-aL-GvI"/>
+                                    <constraint firstAttribute="width" constant="280" id="pu9-jN-Ey7"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="Macbook"/>
+                                <connections>
+                                    <action selector="tappedMacButton:" destination="wZa-wu-28B" eventType="touchUpInside" id="xzf-V5-QdU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llf-y5-DXe">
+                                <rect key="frame" x="56.666666666666657" y="433" width="280" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="FoQ-ZG-YDV"/>
+                                    <constraint firstAttribute="width" constant="280" id="LQs-Le-3b2"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="Imac"/>
+                                <connections>
+                                    <action selector="tappedImacButton:" destination="wZa-wu-28B" eventType="touchUpInside" id="qff-bX-2jj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NQu-Eb-I8W"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="Llf-y5-DXe" firstAttribute="top" secondItem="JFG-9O-lM7" secondAttribute="bottom" constant="68" id="Bhy-GF-tnz"/>
+                            <constraint firstItem="Llf-y5-DXe" firstAttribute="centerX" secondItem="cCF-Kv-hDL" secondAttribute="centerX" id="ObR-gU-F6H"/>
+                            <constraint firstItem="paO-1E-XMZ" firstAttribute="top" secondItem="NQu-Eb-I8W" secondAttribute="top" id="XD8-s8-MjN"/>
+                            <constraint firstItem="paO-1E-XMZ" firstAttribute="centerX" secondItem="cCF-Kv-hDL" secondAttribute="centerX" id="aEy-jY-WFl"/>
+                            <constraint firstItem="JFG-9O-lM7" firstAttribute="top" secondItem="paO-1E-XMZ" secondAttribute="bottom" constant="73" id="b7X-sH-5TG"/>
+                            <constraint firstItem="JFG-9O-lM7" firstAttribute="centerX" secondItem="cCF-Kv-hDL" secondAttribute="centerX" id="ogP-Pr-zfS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ShZ-Hi-KZ1"/>
+                    <connections>
+                        <outlet property="imacButton" destination="Llf-y5-DXe" id="hAG-IP-c5E"/>
+                        <outlet property="macButton" destination="JFG-9O-lM7" id="mlR-dc-eai"/>
+                        <outlet property="titleLabel" destination="paO-1E-XMZ" id="ufL-Wb-qMY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEK-fG-NL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293.8931297709923" y="-4.2253521126760569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Imac" width="512" height="512"/>
+        <image name="Macbook" width="1499" height="802"/>
+        <image name="logo_apple" width="244" height="300"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
