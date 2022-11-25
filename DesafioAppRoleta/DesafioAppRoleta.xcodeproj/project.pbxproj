@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C095368F2930380E0081E983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095368E2930380E0081E983 /* AppDelegate.swift */; };
+		C09536912930380E0081E983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09536902930380E0081E983 /* SceneDelegate.swift */; };
+		C09536932930380E0081E983 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09536922930380E0081E983 /* ViewController.swift */; };
+		C09536962930380E0081E983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09536942930380E0081E983 /* Main.storyboard */; };
+		C0953698293038100081E983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0953697293038100081E983 /* Assets.xcassets */; };
+		C095369B293038100081E983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0953699293038100081E983 /* LaunchScreen.storyboard */; };
+		C09536A4293039EC0081E983 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09536A3293039EC0081E983 /* TabBarViewController.swift */; };
+		C09536A829303CE30081E983 /* EmptyStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09536A629303CE30081E983 /* EmptyStateTableViewCell.swift */; };
+		C09536A929303CE30081E983 /* EmptyStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C09536A729303CE30081E983 /* EmptyStateTableViewCell.xib */; };
+		C09536AC2930418E0081E983 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09536AB2930418E0081E983 /* EmptyState.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C095368B2930380E0081E983 /* DesafioAppRoleta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioAppRoleta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C095368E2930380E0081E983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C09536902930380E0081E983 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C09536922930380E0081E983 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C09536952930380E0081E983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0953697293038100081E983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C095369A293038100081E983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C095369C293038100081E983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C09536A3293039EC0081E983 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C09536A629303CE30081E983 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
+		C09536A729303CE30081E983 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
+		C09536AB2930418E0081E983 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C09536882930380E0081E983 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C09536822930380E0081E983 = {
+			isa = PBXGroup;
+			children = (
+				C095368D2930380E0081E983 /* DesafioAppRoleta */,
+				C095368C2930380E0081E983 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C095368C2930380E0081E983 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C095368B2930380E0081E983 /* DesafioAppRoleta.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C095368D2930380E0081E983 /* DesafioAppRoleta */ = {
+			isa = PBXGroup;
+			children = (
+				C09536AA2930416D0081E983 /* Model */,
+				C09536A529303C870081E983 /* TableViewCell */,
+				C09536A2293039CB0081E983 /* TabBar */,
+				C095368E2930380E0081E983 /* AppDelegate.swift */,
+				C09536902930380E0081E983 /* SceneDelegate.swift */,
+				C09536922930380E0081E983 /* ViewController.swift */,
+				C09536942930380E0081E983 /* Main.storyboard */,
+				C0953697293038100081E983 /* Assets.xcassets */,
+				C0953699293038100081E983 /* LaunchScreen.storyboard */,
+				C095369C293038100081E983 /* Info.plist */,
+			);
+			path = DesafioAppRoleta;
+			sourceTree = "<group>";
+		};
+		C09536A2293039CB0081E983 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C09536A3293039EC0081E983 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C09536A529303C870081E983 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C09536A629303CE30081E983 /* EmptyStateTableViewCell.swift */,
+				C09536A729303CE30081E983 /* EmptyStateTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		C09536AA2930416D0081E983 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C09536AB2930418E0081E983 /* EmptyState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C095368A2930380E0081E983 /* DesafioAppRoleta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C095369F293038100081E983 /* Build configuration list for PBXNativeTarget "DesafioAppRoleta" */;
+			buildPhases = (
+				C09536872930380E0081E983 /* Sources */,
+				C09536882930380E0081E983 /* Frameworks */,
+				C09536892930380E0081E983 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesafioAppRoleta;
+			productName = DesafioAppRoleta;
+			productReference = C095368B2930380E0081E983 /* DesafioAppRoleta.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C09536832930380E0081E983 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					C095368A2930380E0081E983 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = C09536862930380E0081E983 /* Build configuration list for PBXProject "DesafioAppRoleta" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C09536822930380E0081E983;
+			productRefGroup = C095368C2930380E0081E983 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C095368A2930380E0081E983 /* DesafioAppRoleta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C09536892930380E0081E983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C095369B293038100081E983 /* LaunchScreen.storyboard in Resources */,
+				C0953698293038100081E983 /* Assets.xcassets in Resources */,
+				C09536962930380E0081E983 /* Main.storyboard in Resources */,
+				C09536A929303CE30081E983 /* EmptyStateTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C09536872930380E0081E983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C09536A829303CE30081E983 /* EmptyStateTableViewCell.swift in Sources */,
+				C09536A4293039EC0081E983 /* TabBarViewController.swift in Sources */,
+				C09536932930380E0081E983 /* ViewController.swift in Sources */,
+				C09536AC2930418E0081E983 /* EmptyState.swift in Sources */,
+				C095368F2930380E0081E983 /* AppDelegate.swift in Sources */,
+				C09536912930380E0081E983 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C09536942930380E0081E983 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C09536952930380E0081E983 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0953699293038100081E983 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C095369A293038100081E983 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C095369D293038100081E983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C095369E293038100081E983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C09536A0293038100081E983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK772J695M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DesafioAppRoleta/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielRosa.DesafioAppRoleta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C09536A1293038100081E983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PK772J695M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DesafioAppRoleta/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielRosa.DesafioAppRoleta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C09536862930380E0081E983 /* Build configuration list for PBXProject "DesafioAppRoleta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C095369D293038100081E983 /* Debug */,
+				C095369E293038100081E983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C095369F293038100081E983 /* Build configuration list for PBXNativeTarget "DesafioAppRoleta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C09536A0293038100081E983 /* Debug */,
+				C09536A1293038100081E983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C09536832930380E0081E983 /* Project object */;
+}
