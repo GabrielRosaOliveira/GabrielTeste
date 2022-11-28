@@ -80,15 +80,15 @@ extension ViewController: UITableViewDataSource {
         } else {
             return 88
         }
-        
     }
-    
 }
 
 extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        nameTextField.resignFirstResponder()
+        listPerson.append(Person(name: nameTextField.text ?? "", image: listImage.randomElement() ?? ""))
+        tableView.reloadData()
         return true
     }
     
