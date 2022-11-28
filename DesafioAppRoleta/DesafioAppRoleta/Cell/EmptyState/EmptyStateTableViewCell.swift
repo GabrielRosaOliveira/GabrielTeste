@@ -24,9 +24,9 @@ class EmptyStateTableViewCell: UITableViewCell {
         configElements()
     }
     
-    func setupCell(empty: EmptyState) {
-        rouletteImageView.image = empty.image
-        titleLabel.text = empty.title
+    func setupCell(image: String, title: String) {
+        rouletteImageView.image = UIImage(named: image)
+        titleLabel.text = title
     }
     
     func configElements() {
