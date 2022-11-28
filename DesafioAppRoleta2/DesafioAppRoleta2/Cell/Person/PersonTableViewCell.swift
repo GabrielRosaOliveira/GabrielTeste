@@ -21,7 +21,7 @@ class PersonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
+    configElementsCell()
     }
 
     func setupCell(data: Person) {

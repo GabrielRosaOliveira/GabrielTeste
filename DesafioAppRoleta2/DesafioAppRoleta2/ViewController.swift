@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configElements()
         configTableView()
+        nameTextField.delegate = self
     }
 
     func configTableView() {
@@ -59,7 +60,6 @@ extension ViewController: UITableViewDataSource {
         } else {
             return listPerson.count
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,7 +71,6 @@ extension ViewController: UITableViewDataSource {
             cell?.setupCell(data: listPerson[indexPath.row])
             return cell ?? UITableViewCell()
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -86,8 +85,8 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        nameTextField.resignFirstResponder()
-        listPerson.append(Person(name: nameTextField.text ?? "", image: listImage.randomElement() ?? ""))
+        textField.resignFirstResponder()
+        listPerson.append(Person(name: textField.text ?? "", image: listImage.randomElement() ?? ""))
         tableView.reloadData()
         return true
     }
