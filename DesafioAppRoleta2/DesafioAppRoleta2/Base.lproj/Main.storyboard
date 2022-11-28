@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="219" y="80"/>
         </scene>
-        <!--Item 1-->
+        <!--Roleta-->
         <scene sceneID="CbN-4g-35P">
             <objects>
                 <viewController id="gxx-k2-Yw1" customClass="ViewController" customModule="DesafioAppRoleta2" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,6 +43,9 @@
                                 <rect key="frame" x="30" y="295" width="333" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tappedDrawNumberButton:" destination="gxx-k2-Yw1" eventType="editingDidEnd" id="7x9-xq-Phk"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9l-Ej-CKz">
                                 <rect key="frame" x="30" y="355" width="333" height="40"/>
@@ -74,7 +77,7 @@
                             <constraint firstItem="p9P-0k-8PD" firstAttribute="bottom" secondItem="XVQ-MH-jro" secondAttribute="bottom" id="raG-5W-jhO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="88J-sk-axF"/>
+                    <tabBarItem key="tabBarItem" title="Roleta" id="88J-sk-axF"/>
                     <connections>
                         <outlet property="drawNumberButton" destination="e9l-Ej-CKz" id="1Tj-yh-boZ"/>
                         <outlet property="logoImageView" destination="fNV-AI-Rc2" id="k8a-z3-IVN"/>
@@ -86,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="217.55725190839695" y="-527.46478873239437"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="B0R-Fb-Y8D">
             <objects>
-                <tabBarController id="i00-r1-8R0" sceneMemberID="viewController">
+                <tabBarController id="i00-r1-8R0" customClass="TabBarViewController" customModule="DesafioAppRoleta2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rL2-Dp-rhr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

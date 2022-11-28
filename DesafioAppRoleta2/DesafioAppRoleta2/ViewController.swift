@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var drawNumberButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var listPerson: [Person] = []
+    var listImage: [String] = ["Image-1", "Image-2", "Image-3", "Image-4", "Image-5"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
@@ -24,8 +27,15 @@ class ViewController: UIViewController {
         tableView.backgroundColor = .black
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.separatorStyle = .none
         tableView.register(EmptyStateTableViewCell.nib(), forCellReuseIdentifier: EmptyStateTableViewCell.identifier)
+        tableView.register(PersonTableViewCell.nib(), forCellReuseIdentifier: PersonTableViewCell.identifier)
     }
+    
+    @IBAction func tappedDrawNumberButton(_ sender: UITextField) {
+    }
+    
     
     func configElements() {
         logoImageView.image = UIImage(named: "card")
@@ -44,17 +54,33 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if listPerson.count == 0 {
+            return 1
+        } else {
+            return listPerson.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: EmptyStateTableViewCell.identifier, for: indexPath) as? EmptyStateTableViewCell
+        if listPerson.count == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyStateTableViewCell.identifier, for: indexPath) as? EmptyStateTableViewCell
+            return cell ?? UITableViewCell()
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: PersonTableViewCell.identifier, for: indexPath) as? PersonTableViewCell
+            cell?.setupCell(data: listPerson[indexPath.row])
+            return cell ?? UITableViewCell()
+        }
         
-        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 217
+        if listPerson.count == 0 {
+            return 217
+        } else {
+            return 88
+        }
+        
     }
     
 }
