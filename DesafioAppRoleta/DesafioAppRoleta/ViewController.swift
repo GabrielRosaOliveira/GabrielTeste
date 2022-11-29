@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configTableView()
         configElements()
+        nameTextField.delegate = self
     }
     
     func configTableView() {
@@ -80,6 +81,7 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        listPerson.append(Person(name: textField.text ?? "", image: listImage ?? UIImage()))
         return true
     }
     
