@@ -81,7 +81,8 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        listPerson.append(Person(name: textField.text ?? "", image: listImage ?? UIImage()))
+        listPerson.append(Person(name: textField.text ?? "", image: listImage.randomElement() ?? ""))
+        tableView.reloadData()
         return true
     }
     
