@@ -19,6 +19,7 @@
 		C0CA385729352EC2001B7B91 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0CA385529352EC2001B7B91 /* PersonTableViewCell.xib */; };
 		C0CA385A29352FBE001B7B91 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA385929352FBE001B7B91 /* Person.swift */; };
 		C0CA385D293532D2001B7B91 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA385C293532D2001B7B91 /* TabBarViewController.swift */; };
+		C0F019C32936DBB80006E030 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F019C22936DBB80006E030 /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C0CA385529352EC2001B7B91 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		C0CA385929352FBE001B7B91 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C0CA385C293532D2001B7B91 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C0F019C22936DBB80006E030 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		C058A5D92934F9FA000C5196 /* DesafioAppRoleta2 */ = {
 			isa = PBXGroup;
 			children = (
+				C0F019C12936DB9B0006E030 /* Alert */,
 				C0CA385B293532B6001B7B91 /* TabBar */,
 				C0CA385829352FAF001B7B91 /* Model */,
 				C058A5EE2934FD85000C5196 /* Cell */,
@@ -123,6 +126,14 @@
 				C0CA385C293532D2001B7B91 /* TabBarViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C0F019C12936DB9B0006E030 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C0F019C22936DBB80006E030 /* AlertController.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				C058A5DF2934F9FA000C5196 /* ViewController.swift in Sources */,
 				C058A5DB2934F9FA000C5196 /* AppDelegate.swift in Sources */,
 				C058A5DD2934F9FA000C5196 /* SceneDelegate.swift in Sources */,
+				C0F019C32936DBB80006E030 /* AlertController.swift in Sources */,
 				C0CA385D293532D2001B7B91 /* TabBarViewController.swift in Sources */,
 				C0CA385629352EC2001B7B91 /* PersonTableViewCell.swift in Sources */,
 				C058A5F12934FDA6000C5196 /* EmptyStateTableViewCell.swift in Sources */,

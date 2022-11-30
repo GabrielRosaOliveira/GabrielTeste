@@ -16,12 +16,17 @@ class ViewController: UIViewController {
     
     var listPerson: [Person] = []
     var listImage: [String] = ["Image-1", "Image-2", "Image-3", "Image-4", "Image-5"]
+    var person: Person?
+    var alert: AlertController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        alert = AlertController(controller: self)
         configElements()
         configTableView()
         nameTextField.delegate = self
+        blockDrawButton()
+        
     }
 
     func configTableView() {
@@ -35,6 +40,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedDrawNumberButton(_ sender: UITextField) {
+        self.person = listPerson.randomElement()
+        dump(person)
     }
     
     
@@ -45,10 +52,37 @@ class ViewController: UIViewController {
         drawNumberButton.backgroundColor = .blue
         drawNumberButton.setTitleColor(.white, for: .normal)
     }
+    
+    func blockDrawButton() {
+        if listPerson.isEmpty {
+            drawNumberButton.isEnabled = false
+            drawNumberButton.alpha = 0.5
+        } else {
+            drawNumberButton.isEnabled = true
+            drawNumberButton.alpha = 1
+        }
+        
+    }
+    
 
 }
 
 extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dump(self.listPerson[indexPath.row])
+        if self.listPerson[indexPath.row] === self.person {
+            print("parabens você foi sorteado, então pague a conta")
+            alert?.showAlert(title: "Muitoo bom", message: "Agora é sua vez, pague a conta ;)")
+            listPerson.removeAll()
+        } else{
+            listPerson.remove(at: indexPath.row)
+            
+            print("uffa, você escapou")
+        }
+        blockDrawButton()
+        tableView.reloadData()
+    }
     
 }
 
@@ -86,8 +120,13 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        listPerson.append(Person(name: textField.text ?? "", image: listImage.randomElement() ?? ""))
-        tableView.reloadData()
+        
+        if !(textField.text?.isEmpty ?? false) {
+            listPerson.append(Person(name: textField.text ?? "", image: listImage.randomElement() ?? ""))
+            tableView.reloadData()
+        }
+        blockDrawButton()
+        textField.text = ""
         return true
     }
     
