@@ -66,11 +66,9 @@ extension HomeVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if viewModel.checkPersonPayer(indexPath: indexPath) {
-            print("parabens você foi sorteado, então pague a conta")
             alert?.showAlert(title: "Muitoo bom", message: "Agora é sua vez, pague a conta ;)")
             viewModel.removeAll()
         } else{
-            print("uffa, você escapou")
             viewModel.removePerson(indexPath: indexPath)
         }
         blockedDrawNumberButton()
@@ -107,11 +105,11 @@ extension HomeVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if viewModel.shouldReturn(textField: textField) {
-            viewModel.myListImageAndPerson(textField: textField)
+            viewModel.myListImageAndPerson(name: textField.text ?? "")
             tableView.reloadData()
             blockedDrawNumberButton()
         }
-        viewModel.textFieldEmpty(textFiled: textField)
+        textField.text = ""
         return true
     }
 }

@@ -70,13 +70,10 @@ class HomeViewModel {
         return !(textField.text?.isEmpty ?? false)
     }
     
-    func myListImageAndPerson(textField: UITextField) -> Bool {
-        listPerson.append(Person(name: textField.text ?? "", image: listImage.randomElement() ?? ""))
-        return true
+    func myListImageAndPerson(name: String){
+        listPerson.append(Person(name: name, image: listImage.randomElement() ?? ""))
+      
     }
     
-    func textFieldEmpty(textFiled: UITextField) -> Bool{
-        textFiled.text = ""
-        return true
-    }
+
 }
