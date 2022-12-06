@@ -10,7 +10,7 @@ import UIKit
 class HomeViewModel {
 
    private var employeeList: [Employee] = [
-        Employee(name: "Jorge", age: "30", profession: "Developer IOS", salary:                               "1.000,00", imageUser: UIImage(systemName: "person") ?? UIImage()),
+        Employee(name: "Jorge", age: "30", profession: "Developer IOS", salary: "1.000,00", imageUser: UIImage(systemName: "person") ?? UIImage()),
         Employee(name: "Gabriel", age: "26", profession: "Developer IOS", salary: "1.000,00", imageUser: UIImage(systemName: "person") ?? UIImage()),
         Employee(name: "Lorena", age: "23", profession: "Developer IOS", salary: "1.000,00", imageUser: UIImage(systemName: "person") ?? UIImage())]
     
