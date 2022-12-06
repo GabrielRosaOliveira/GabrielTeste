@@ -11,8 +11,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let listVehicles: [Vehicles] = [Vehicles(titel: "Carros", list: ["car1", "car2", "car3", "car4", "car5", "car6"]),
-                                    Vehicles(titel: "Motos", list: ["car2", "car4", "car5", "car6"])]
+    let listVehicles: [Vehicles] = [
+        Vehicles(titel: "Carros", list: ["car1", "car2", "car3", "car4", "car5", "car6"]),
+        Vehicles(titel: "Motos", list: ["car2", "car4", "car5", "car6"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()
