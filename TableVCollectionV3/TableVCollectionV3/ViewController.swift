@@ -11,9 +11,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let carList: [String] = ["car1", "car2"]
-    let bikeList: [String] = ["moto1", "moto2", "moto3"]
-    
     let newList: [Vehicles] = [Vehicles(title: "Carros:", list: ["car1", "car2", "car3", "car4", "car5"]),
                                Vehicles(title: "Motos:", list: ["moto1", "moto2", "moto3"])]
     
