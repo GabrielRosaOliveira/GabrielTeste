@@ -15,6 +15,8 @@
 		C058A5E72934F9FC000C5196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C058A5E52934F9FC000C5196 /* LaunchScreen.storyboard */; };
 		C058A5F12934FDA6000C5196 /* EmptyStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058A5EF2934FDA6000C5196 /* EmptyStateTableViewCell.swift */; };
 		C058A5F22934FDA6000C5196 /* EmptyStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C058A5F02934FDA6000C5196 /* EmptyStateTableViewCell.xib */; };
+		C08C5E642942AE6500A01724 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C5E632942AE6500A01724 /* HistoryViewController.swift */; };
+		C08C5E672942B09100A01724 /* history.json in Resources */ = {isa = PBXBuildFile; fileRef = C08C5E662942B09100A01724 /* history.json */; };
 		C0CA385629352EC2001B7B91 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA385429352EC2001B7B91 /* PersonTableViewCell.swift */; };
 		C0CA385729352EC2001B7B91 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0CA385529352EC2001B7B91 /* PersonTableViewCell.xib */; };
 		C0CA385A29352FBE001B7B91 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA385929352FBE001B7B91 /* Person.swift */; };
@@ -33,6 +35,8 @@
 		C058A5E82934F9FC000C5196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C058A5EF2934FDA6000C5196 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
 		C058A5F02934FDA6000C5196 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
+		C08C5E632942AE6500A01724 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		C08C5E662942B09100A01724 /* history.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = history.json; sourceTree = "<group>"; };
 		C0CA385429352EC2001B7B91 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		C0CA385529352EC2001B7B91 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		C0CA385929352FBE001B7B91 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		C058A5D92934F9FA000C5196 /* DesafioAppRoleta2 */ = {
 			isa = PBXGroup;
 			children = (
+				C08C5E652942B02F00A01724 /* Json */,
+				C08C5E622942AE3500A01724 /* history */,
 				C0F019C12936DB9B0006E030 /* Alert */,
 				C0CA385B293532B6001B7B91 /* TabBar */,
 				C0CA385829352FAF001B7B91 /* Model */,
@@ -92,6 +98,22 @@
 				C0CA385229352E95001B7B91 /* Empty */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C08C5E622942AE3500A01724 /* history */ = {
+			isa = PBXGroup;
+			children = (
+				C08C5E632942AE6500A01724 /* HistoryViewController.swift */,
+			);
+			path = history;
+			sourceTree = "<group>";
+		};
+		C08C5E652942B02F00A01724 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				C08C5E662942B09100A01724 /* history.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		C0CA385229352E95001B7B91 /* Empty */ = {
@@ -198,6 +220,7 @@
 				C058A5E42934F9FC000C5196 /* Assets.xcassets in Resources */,
 				C058A5E22934F9FA000C5196 /* Main.storyboard in Resources */,
 				C058A5F22934FDA6000C5196 /* EmptyStateTableViewCell.xib in Resources */,
+				C08C5E672942B09100A01724 /* history.json in Resources */,
 				C0CA385729352EC2001B7B91 /* PersonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +238,7 @@
 				C058A5DD2934F9FA000C5196 /* SceneDelegate.swift in Sources */,
 				C0F019C32936DBB80006E030 /* AlertController.swift in Sources */,
 				C0CA385D293532D2001B7B91 /* TabBarViewController.swift in Sources */,
+				C08C5E642942AE6500A01724 /* HistoryViewController.swift in Sources */,
 				C0CA385629352EC2001B7B91 /* PersonTableViewCell.swift in Sources */,
 				C058A5F12934FDA6000C5196 /* EmptyStateTableViewCell.swift in Sources */,
 			);

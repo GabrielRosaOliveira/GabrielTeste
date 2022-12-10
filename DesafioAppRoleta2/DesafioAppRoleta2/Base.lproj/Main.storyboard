@@ -8,17 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--History-->
         <scene sceneID="m04-1Y-uW6">
             <objects>
-                <viewController id="GQu-WW-qRr" sceneMemberID="viewController">
+                <viewController id="GQu-WW-qRr" customClass="HistoryViewController" customModule="DesafioAppRoleta2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AX7-hU-wSm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="quD-If-bcH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="yK1-bq-ImI"/>
+                    <tabBarItem key="tabBarItem" title="History" id="yK1-bq-ImI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2c-4U-9qq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
