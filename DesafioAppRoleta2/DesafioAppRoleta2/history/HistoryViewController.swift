@@ -9,9 +9,11 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
+    let viewModel: HistoryViewModel = HistoryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.fetchHistory()
         
     }
     

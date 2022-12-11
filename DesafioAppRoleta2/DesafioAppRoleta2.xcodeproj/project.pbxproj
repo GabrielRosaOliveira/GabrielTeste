@@ -16,7 +16,11 @@
 		C058A5F12934FDA6000C5196 /* EmptyStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058A5EF2934FDA6000C5196 /* EmptyStateTableViewCell.swift */; };
 		C058A5F22934FDA6000C5196 /* EmptyStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C058A5F02934FDA6000C5196 /* EmptyStateTableViewCell.xib */; };
 		C08C5E642942AE6500A01724 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C5E632942AE6500A01724 /* HistoryViewController.swift */; };
-		C08C5E672942B09100A01724 /* history.json in Resources */ = {isa = PBXBuildFile; fileRef = C08C5E662942B09100A01724 /* history.json */; };
+		C08C5E672942B09100A01724 /* History.json in Resources */ = {isa = PBXBuildFile; fileRef = C08C5E662942B09100A01724 /* History.json */; };
+		C0A47930294616C100344C5E /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4792F294616C100344C5E /* History.swift */; };
+		C0A479332946206C00344C5E /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A479322946206C00344C5E /* HistoryViewModel.swift */; };
+		C0A47936294621C400344C5E /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A47935294621C400344C5E /* HistoryService.swift */; };
+		C0A47938294624B300344C5E /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A47937294624B300344C5E /* GenericService.swift */; };
 		C0CA385629352EC2001B7B91 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA385429352EC2001B7B91 /* PersonTableViewCell.swift */; };
 		C0CA385729352EC2001B7B91 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0CA385529352EC2001B7B91 /* PersonTableViewCell.xib */; };
 		C0CA385A29352FBE001B7B91 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA385929352FBE001B7B91 /* Person.swift */; };
@@ -36,7 +40,11 @@
 		C058A5EF2934FDA6000C5196 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
 		C058A5F02934FDA6000C5196 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
 		C08C5E632942AE6500A01724 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		C08C5E662942B09100A01724 /* history.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = history.json; sourceTree = "<group>"; };
+		C08C5E662942B09100A01724 /* History.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = History.json; sourceTree = "<group>"; };
+		C0A4792F294616C100344C5E /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		C0A479322946206C00344C5E /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		C0A47935294621C400344C5E /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
+		C0A47937294624B300344C5E /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		C0CA385429352EC2001B7B91 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		C0CA385529352EC2001B7B91 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		C0CA385929352FBE001B7B91 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -74,10 +82,11 @@
 		C058A5D92934F9FA000C5196 /* DesafioAppRoleta2 */ = {
 			isa = PBXGroup;
 			children = (
-				C08C5E652942B02F00A01724 /* Json */,
+				C0A47934294620F900344C5E /* Service */,
 				C08C5E622942AE3500A01724 /* history */,
 				C0F019C12936DB9B0006E030 /* Alert */,
 				C0CA385B293532B6001B7B91 /* TabBar */,
+				C08C5E652942B02F00A01724 /* Json */,
 				C0CA385829352FAF001B7B91 /* Model */,
 				C058A5EE2934FD85000C5196 /* Cell */,
 				C058A5DA2934F9FA000C5196 /* AppDelegate.swift */,
@@ -103,6 +112,7 @@
 		C08C5E622942AE3500A01724 /* history */ = {
 			isa = PBXGroup;
 			children = (
+				C0A479312946205200344C5E /* ViewModel */,
 				C08C5E632942AE6500A01724 /* HistoryViewController.swift */,
 			);
 			path = history;
@@ -111,9 +121,26 @@
 		C08C5E652942B02F00A01724 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				C08C5E662942B09100A01724 /* history.json */,
+				C08C5E662942B09100A01724 /* History.json */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		C0A479312946205200344C5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C0A479322946206C00344C5E /* HistoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C0A47934294620F900344C5E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C0A47935294621C400344C5E /* HistoryService.swift */,
+				C0A47937294624B300344C5E /* GenericService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		C0CA385229352E95001B7B91 /* Empty */ = {
@@ -138,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				C0CA385929352FBE001B7B91 /* Person.swift */,
+				C0A4792F294616C100344C5E /* History.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,7 +248,7 @@
 				C058A5E42934F9FC000C5196 /* Assets.xcassets in Resources */,
 				C058A5E22934F9FA000C5196 /* Main.storyboard in Resources */,
 				C058A5F22934FDA6000C5196 /* EmptyStateTableViewCell.xib in Resources */,
-				C08C5E672942B09100A01724 /* history.json in Resources */,
+				C08C5E672942B09100A01724 /* History.json in Resources */,
 				C0CA385729352EC2001B7B91 /* PersonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,12 +262,16 @@
 			files = (
 				C0CA385A29352FBE001B7B91 /* Person.swift in Sources */,
 				C058A5DF2934F9FA000C5196 /* ViewController.swift in Sources */,
+				C0A479332946206C00344C5E /* HistoryViewModel.swift in Sources */,
 				C058A5DB2934F9FA000C5196 /* AppDelegate.swift in Sources */,
 				C058A5DD2934F9FA000C5196 /* SceneDelegate.swift in Sources */,
+				C0A47930294616C100344C5E /* History.swift in Sources */,
+				C0A47938294624B300344C5E /* GenericService.swift in Sources */,
 				C0F019C32936DBB80006E030 /* AlertController.swift in Sources */,
 				C0CA385D293532D2001B7B91 /* TabBarViewController.swift in Sources */,
 				C08C5E642942AE6500A01724 /* HistoryViewController.swift in Sources */,
 				C0CA385629352EC2001B7B91 /* PersonTableViewCell.swift in Sources */,
+				C0A47936294621C400344C5E /* HistoryService.swift in Sources */,
 				C058A5F12934FDA6000C5196 /* EmptyStateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
