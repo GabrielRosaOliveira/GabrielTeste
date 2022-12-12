@@ -8,12 +8,15 @@
 import UIKit
 
 protocol HistoryServiceProtocol: GenericService {
-    func getHistoryFromJson(completion: @escaping completion<History?>)
+    func getHistoryFromJson(completion: completion<History?>)
 }
 
 class HistoryService: HistoryServiceProtocol {
     
-    func getHistoryFromJson(completion: @escaping completion<History?>) {
+    
+    
+    
+    func getHistoryFromJson(completion: completion<History?>) {
         if let url = Bundle.main.url(forResource: "History", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
@@ -26,3 +29,14 @@ class HistoryService: HistoryServiceProtocol {
         }
     }
 }
+
+
+// Exemplo de Arquitetura MVVM
+
+// Tela Home
+
+//HomeViewController.storyboard ou HomeViewController.xib ou HomeScreen(ViewCode)
+// HomeViewController
+// HomeViewModel
+// HomeService -> OBS: Caso seja necessario -> Essa classe deve conter (HomeServiceProtocol -> OBS: Depende da Arquitetura)
+
