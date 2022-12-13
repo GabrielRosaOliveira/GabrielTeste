@@ -1,0 +1,6 @@
+framework module Pods_DesafioAppRoleta2 {
+  umbrella header "Pods-DesafioAppRoleta2-umbrella.h"
+
+  export *
+  module * { export * }
+}
