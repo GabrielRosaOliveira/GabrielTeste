@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385DEB14A840A844D9C0F89E /* Pods_DesafioAppRoleta2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3CEB3AB5A504187B536ECD /* Pods_DesafioAppRoleta2.framework */; };
 		C058A5DB2934F9FA000C5196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058A5DA2934F9FA000C5196 /* AppDelegate.swift */; };
 		C058A5DD2934F9FA000C5196 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058A5DC2934F9FA000C5196 /* SceneDelegate.swift */; };
 		C058A5DF2934F9FA000C5196 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058A5DE2934F9FA000C5196 /* ViewController.swift */; };
@@ -29,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3CEB3AB5A504187B536ECD /* Pods_DesafioAppRoleta2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioAppRoleta2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A680E00DB5D9C8C63DB418 /* Pods-DesafioAppRoleta2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioAppRoleta2.release.xcconfig"; path = "Target Support Files/Pods-DesafioAppRoleta2/Pods-DesafioAppRoleta2.release.xcconfig"; sourceTree = "<group>"; };
+		71253A22B5287AD8294021A2 /* Pods-DesafioAppRoleta2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioAppRoleta2.debug.xcconfig"; path = "Target Support Files/Pods-DesafioAppRoleta2/Pods-DesafioAppRoleta2.debug.xcconfig"; sourceTree = "<group>"; };
 		C058A5D72934F9FA000C5196 /* DesafioAppRoleta2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioAppRoleta2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C058A5DA2934F9FA000C5196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C058A5DC2934F9FA000C5196 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,17 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385DEB14A840A844D9C0F89E /* Pods_DesafioAppRoleta2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C6C24978AD0C39536306377 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71253A22B5287AD8294021A2 /* Pods-DesafioAppRoleta2.debug.xcconfig */,
+				36A680E00DB5D9C8C63DB418 /* Pods-DesafioAppRoleta2.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C058A5CE2934F9FA000C5196 = {
 			isa = PBXGroup;
 			children = (
 				C058A5D92934F9FA000C5196 /* DesafioAppRoleta2 */,
 				C058A5D82934F9FA000C5196 /* Products */,
+				5C6C24978AD0C39536306377 /* Pods */,
+				FDFBD4862CB01F75E0CD45B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +203,14 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		FDFBD4862CB01F75E0CD45B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A3CEB3AB5A504187B536ECD /* Pods_DesafioAppRoleta2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C058A5EB2934F9FC000C5196 /* Build configuration list for PBXNativeTarget "DesafioAppRoleta2" */;
 			buildPhases = (
+				5A39E821C7372A062BA4FA8D /* [CP] Check Pods Manifest.lock */,
 				C058A5D32934F9FA000C5196 /* Sources */,
 				C058A5D42934F9FA000C5196 /* Frameworks */,
 				C058A5D52934F9FA000C5196 /* Resources */,
+				E0D4784E57A98B6D55DEAACA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,7 +249,7 @@
 				};
 			};
 			buildConfigurationList = C058A5D22934F9FA000C5196 /* Build configuration list for PBXProject "DesafioAppRoleta2" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -254,6 +281,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A39E821C7372A062BA4FA8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DesafioAppRoleta2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0D4784E57A98B6D55DEAACA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioAppRoleta2/Pods-DesafioAppRoleta2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DesafioAppRoleta2/Pods-DesafioAppRoleta2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DesafioAppRoleta2/Pods-DesafioAppRoleta2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C058A5D32934F9FA000C5196 /* Sources */ = {
@@ -414,6 +483,7 @@
 		};
 		C058A5EC2934F9FC000C5196 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71253A22B5287AD8294021A2 /* Pods-DesafioAppRoleta2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +512,7 @@
 		};
 		C058A5ED2934F9FC000C5196 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A680E00DB5D9C8C63DB418 /* Pods-DesafioAppRoleta2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
