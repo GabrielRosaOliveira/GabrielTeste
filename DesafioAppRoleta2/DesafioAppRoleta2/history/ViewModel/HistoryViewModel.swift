@@ -12,7 +12,7 @@ class HistoryViewModel {
     private let service: HistoryService = HistoryService()
     
     func fetchHistory() {
-        service.getHistoryFromJson { result, faiLure in
+        service.getHistoryURLSession { result, faiLure in
             if let result = result {
                 print(result)
             } else {
