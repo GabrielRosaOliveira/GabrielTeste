@@ -22,6 +22,8 @@
 		C0A479332946206C00344C5E /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A479322946206C00344C5E /* HistoryViewModel.swift */; };
 		C0A47936294621C400344C5E /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A47935294621C400344C5E /* HistoryService.swift */; };
 		C0A47938294624B300344C5E /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A47937294624B300344C5E /* GenericService.swift */; };
+		C0BFE24C29493EEB00EA7282 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BFE24A29493EEB00EA7282 /* HistoryTableViewCell.swift */; };
+		C0BFE24D29493EEB00EA7282 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0BFE24B29493EEB00EA7282 /* HistoryTableViewCell.xib */; };
 		C0CA385629352EC2001B7B91 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA385429352EC2001B7B91 /* PersonTableViewCell.swift */; };
 		C0CA385729352EC2001B7B91 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0CA385529352EC2001B7B91 /* PersonTableViewCell.xib */; };
 		C0CA385A29352FBE001B7B91 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CA385929352FBE001B7B91 /* Person.swift */; };
@@ -49,6 +51,8 @@
 		C0A479322946206C00344C5E /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		C0A47935294621C400344C5E /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
 		C0A47937294624B300344C5E /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		C0BFE24A29493EEB00EA7282 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		C0BFE24B29493EEB00EA7282 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		C0CA385429352EC2001B7B91 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		C0CA385529352EC2001B7B91 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		C0CA385929352FBE001B7B91 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 				71253A22B5287AD8294021A2 /* Pods-DesafioAppRoleta2.debug.xcconfig */,
 				36A680E00DB5D9C8C63DB418 /* Pods-DesafioAppRoleta2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -129,6 +132,7 @@
 		C08C5E622942AE3500A01724 /* history */ = {
 			isa = PBXGroup;
 			children = (
+				C0BFE24929493EBE00EA7282 /* TableViewCell */,
 				C0A479312946205200344C5E /* ViewModel */,
 				C08C5E632942AE6500A01724 /* HistoryViewController.swift */,
 			);
@@ -158,6 +162,15 @@
 				C0A47937294624B300344C5E /* GenericService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		C0BFE24929493EBE00EA7282 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C0BFE24A29493EEB00EA7282 /* HistoryTableViewCell.swift */,
+				C0BFE24B29493EEB00EA7282 /* HistoryTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		C0CA385229352E95001B7B91 /* Empty */ = {
@@ -276,6 +289,7 @@
 				C058A5E22934F9FA000C5196 /* Main.storyboard in Resources */,
 				C058A5F22934FDA6000C5196 /* EmptyStateTableViewCell.xib in Resources */,
 				C08C5E672942B09100A01724 /* History.json in Resources */,
+				C0BFE24D29493EEB00EA7282 /* HistoryTableViewCell.xib in Resources */,
 				C0CA385729352EC2001B7B91 /* PersonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +345,7 @@
 			files = (
 				C0CA385A29352FBE001B7B91 /* Person.swift in Sources */,
 				C058A5DF2934F9FA000C5196 /* ViewController.swift in Sources */,
+				C0BFE24C29493EEB00EA7282 /* HistoryTableViewCell.swift in Sources */,
 				C0A479332946206C00344C5E /* HistoryViewModel.swift in Sources */,
 				C058A5DB2934F9FA000C5196 /* AppDelegate.swift in Sources */,
 				C058A5DD2934F9FA000C5196 /* SceneDelegate.swift in Sources */,
